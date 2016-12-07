@@ -1,0 +1,11 @@
+{
+  "config": {
+    "lang": "vi",
+    "lang_dir": "/lang",
+    "load_more" : 10
+  },
+  "data": {
+    "dir": "/data",
+    "latest": "latest.json"
+  }
+}

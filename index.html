@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrueH</title>
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body class="layout-list">
+    <header>
+      <ul>
+        <li id="for-home"><i id="btn-home" class="clickable btn-home fa fa-home fa-2x"></i></li>
+        <li id="for-back"><i id="btn-back" class="clickable btn-back fa fa-arrow-left fa-2x"></i></li>
+        <li id="for-title"><span data-detail="title"></span></li>
+        <li id="for-search-box">
+          <input id="search-input" name="search" type="search" placeholder="Search" results="5" class="fl-left"><i id="btn-search" class="clickable btn-search fa fa-search fa-2x"></i>
+        </li>
+        <li id="for-tags"><i id="btn-tags" class="clickable btn-tags fa fa-bars fa-2x"></i></li>
+      </ul>
+    </header>
+    <main>
+      <section id="main-list">
+        <div class="wf-container"></div>
+      </section>
+      <section id="main-detail"></section>
+      <section id="main-more">
+        <div class="tabs">
+          <label for="tab-series"></label>
+          <input id="tab-series" type="radio" name="tabs" checked="true">
+          <h2>Series</h2>
+          <div id="tab-content-series">Content: Series</div>
+          <label for="tab-tags"></label>
+          <input id="tab-tags" type="radio" name="tabs" check="true">
+          <h2>Tags</h2>
+          <div id="tab-content-series">Content: Tags</div>
+        </div>
+        <div class="bottom">
+          <ul>
+            <li><i>HOME</i></li>
+            <li class="flex"></li>
+            <li><i id="btn-lang">lang:Vi</i></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <script type="text/javascript" src="./js/Waterfall.js"></script>
+    <script type="text/javascript" src="./js/TH.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+  </body>
+</html>

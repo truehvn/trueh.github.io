@@ -1,0 +1,490 @@
+.fl-left {
+  float: left;
+}
+
+.fl-right {
+  float: right;
+}
+
+.clickable {
+  padding: 4px;
+}
+.clickable:hover {
+  cursor: pointer;
+  background: #cccccc;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -ms-border-radius: 0.25em;
+  border-radius: 0.25em;
+}
+
+body.touch-support .clickable:hover {
+  background: #ffffff;
+}
+
+.visible {
+  display: block;
+}
+
+.visible-flex {
+  display: flex;
+}
+
+.invisible {
+  display: none;
+}
+
+*[ui-route] {
+  cursor: pointer;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
+
+.wf-container:before, .wf-container:after {
+  content: "";
+  display: table;
+}
+
+.wf-container:after {
+  clear: both;
+}
+
+.wf-column {
+  float: left;
+}
+
+body {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0px auto;
+  font-size: 16px;
+  height: 100%;
+}
+
+header {
+  height: 3em;
+  border-bottom: 1px solid #ccc;
+  list-style: none;
+  width: 100%;
+}
+header ul {
+  height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+header ul li {
+  width: auto;
+  padding: 4px;
+}
+header ul li#for-home {
+  order: 1;
+}
+header ul li#for-back {
+  order: 1;
+  display: none;
+}
+header ul li#for-title {
+  order: 2;
+  flex: 1;
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 1.4em;
+  padding-left: 0.5em;
+}
+header ul li#for-search-box {
+  order: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header ul li#for-search-box #search-input {
+  padding: 0.25em;
+  display: none;
+  font-size: 1em;
+}
+header ul li#for-search-box:hover #search-input {
+  display: block;
+}
+header ul li#for-search-box:hover #btn-search {
+  display: none;
+}
+header ul li#for-tags {
+  order: 4;
+}
+
+body.layout-list header #for-back {
+  display: none;
+}
+
+body.layout-search header #for-back {
+  display: block;
+}
+body.layout-search header #search-input {
+  display: block !important;
+}
+body.layout-search header #btn-search {
+  display: none;
+}
+body.layout-search header #for-home {
+  display: none;
+}
+
+body.layout-detail header #for-back {
+  display: block;
+}
+body.layout-detail header #for-home {
+  display: none;
+}
+
+main {
+  flex: 1 1 auto;
+  overflow-y: hidden;
+  min-height: 0;
+  position: relative;
+}
+
+section#main-list {
+  /* customize button */
+  /* style for waterfall grid */
+}
+section#main-list .btn {
+  padding: 6px 12px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+}
+section#main-list .btn:active {
+  background-image: none;
+  outline: 1;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+section#main-list .btn .btn-primary {
+  background-color: #fff;
+  border-color: #ccc;
+}
+section#main-list .btn .btn-primary:hover {
+  background-color: #e6e6e6;
+}
+section#main-list .btn-group {
+  margin: 8px 0;
+}
+section#main-list .wf-container {
+  margin: 0 auto;
+  flex: 1 1 auto;
+  overflow-y: scroll;
+  min-height: 0;
+}
+section#main-list .wf-container:before, section#main-list .wf-container:after {
+  content: "";
+  display: table;
+}
+section#main-list .wf-container:after {
+  clear: both;
+}
+@media screen and (min-width: 768px) {
+  section#main-list .wf-container {
+    width: 750px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  section#main-list .wf-container {
+    width: 970px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section#main-list .wf-container {
+    width: 1170px;
+  }
+}
+section#main-list .wf-box {
+  margin: 10px;
+  position: relative;
+}
+section#main-list .wf-box img {
+  display: block;
+  width: 100%;
+}
+section#main-list .wf-box .content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-top-width: 0;
+  padding: 5px 8px;
+  display: block;
+}
+@media screen and (min-width: 1024px) {
+  section#main-list .wf-box .content {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  section#main-list .wf-box:hover > .content {
+    display: block;
+  }
+}
+section#main-list .wf-column {
+  float: left;
+}
+
+section#main-detail {
+  overflow-y: scroll;
+  padding: 1em;
+}
+section#main-detail > h2 {
+  font-size: 1.8em;
+  font-weight: bold;
+  text-indent: 1em;
+  height: 2em;
+}
+section#main-detail > p {
+  font-size: 1.1em;
+  text-indent: 3em;
+  padding: 0.5em;
+}
+section#main-detail section {
+  margin-top: 1em;
+}
+section#main-detail section h3 {
+  font-size: 1.4em;
+  font-weight: bold;
+  text-indent: 0em;
+  line-height: 1.5em;
+}
+section#main-detail section figure {
+  width: 100%;
+}
+section#main-detail section figure img {
+  width: 100%;
+  height: auto;
+}
+section#main-detail section p {
+  font-size: 1em;
+  text-indent: 2em;
+  padding: 0.25em;
+  text-align: justify;
+}
+
+section#main-more {
+  position: absolute;
+  z-index: 9;
+  width: 90%;
+  max-width: 30em;
+  top: 0;
+  right: 0;
+  margin: 0.5em;
+  box-shadow: 0.25em 0.25em 2em 0.125em rgba(0, 0, 0, 0.5);
+  border-radius: 0.5em;
+  background-color: #ffffff;
+  padding: 0.5em;
+  display: none;
+}
+section#main-more.active {
+  display: block;
+}
+section#main-more .tabs {
+  position: relative;
+  background: #999;
+}
+section#main-more .tabs label {
+  position: absolute;
+  z-index: 1;
+  font-size: 1.1em;
+  width: 50%;
+  height: 2em;
+  line-height: 2em;
+}
+section#main-more .tabs h2 {
+  font-size: 1.1em;
+  width: 50%;
+  height: 2em;
+  line-height: 2em;
+  position: relative;
+  margin: 0;
+  text-align: center;
+  background: #999;
+  color: #fff;
+}
+section#main-more .tabs label {
+  border-right: 1px solid #fff;
+}
+section#main-more .tabs input {
+  position: absolute;
+  top: 0;
+}
+section#main-more .tabs label ~ label, section#main-more .tabs h2 ~ h2 {
+  position: absolute;
+  top: 0;
+}
+section#main-more .tabs label:nth-child(1), section#main-more .tabs h2:nth-child(3) {
+  left: 0em;
+}
+section#main-more .tabs label:nth-child(5), section#main-more .tabs h2:nth-child(7) {
+  left: 50%;
+}
+section#main-more .tabs input + h2 + div {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+section#main-more .tabs input:checked + h2 + div {
+  position: static !important;
+  padding: 1em !important;
+  height: auto !important;
+  width: auto !important;
+}
+section#main-more .tabs label:hover {
+  cursor: pointer;
+}
+section#main-more .tabs div {
+  background: #f0f0f0;
+  padding: 1em;
+}
+section#main-more .tabs input[name="tabs"] {
+  opacity: 0;
+  position: absolute;
+}
+section#main-more .tabs input[name="tabs"]:focus + h2 {
+  outline: 1px dotted #000;
+  outline-offset: 10px;
+}
+section#main-more .tabs:hover h2 {
+  outline: none !important;
+}
+section#main-more .tabs input[name="tabs"]:checked + h2 {
+  background: #333;
+}
+section#main-more .tabs input[name="tabs"]:checked + h2:after {
+  content: "";
+  margin: auto;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #333;
+}
+section#main-more .bottom {
+  margin-top: 0.25em;
+  border-top: 1px solid #cccccc;
+}
+section#main-more .bottom ul {
+  display: flex;
+  width: 100%;
+}
+section#main-more .bottom ul li {
+  line-height: 1.5em;
+}
+section#main-more .bottom ul li.flex {
+  flex: 1;
+}
+
+body.layout-list section#main-list {
+  display: block;
+}
+body.layout-list section#main-detail {
+  display: none;
+}
+
+body.layout-detail section#main-detail {
+  display: block;
+}
+body.layout-detail section#main-list {
+  display: none;
+}
+
+body.layout-search section#main-list {
+  display: block;
+}
+body.layout-search section#main-detail {
+  display: none;
+}
