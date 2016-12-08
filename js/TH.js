@@ -331,7 +331,7 @@ TH.UI = {
             elemSubcontent.innerText = dataContent.subcontent;
             var elemFigure = document.createElement("figure");
             var elemFigureChild;
-            if (dataContent.figure.type == "youtube") {
+            if (dataContent.figure.src.indexOf("youtube.com") != -1) {
                 elemFigure.className = "video-container";
                 elemFigureChild = document.createElement("iframe");
             } else {
