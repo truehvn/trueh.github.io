@@ -395,8 +395,8 @@ TH.Data = {
         for (var i = 0; i < TH.mData.articles.length; i++) {
             var item = TH.mData.articles[i];
             what = what.toLowerCase();
-            var name = item.name.toLowerCase();
-            if (name.indexOf(what) != -1) {
+            var title = item.title.toLowerCase();
+            if (title.indexOf(what) != -1) {
                 TH.appData.data.push(item);
             }
         }
