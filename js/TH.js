@@ -56,6 +56,9 @@ TH.Utils = {
     hasTouchSupport: function is_touch_device() {
         return "ontouchstart" in window || navigator.maxTouchPoints;
     },
+    trimAll: function(what) {
+        return what.replace(/\s+/g, " ").replace(/^\s+|\s+$/, "");
+    },
     spaceToUnderline: function(string) {
         return string.replace(/ /g, "_");
     },
@@ -353,7 +356,7 @@ TH.Data = {
         var url = TH.mConfig.data.dir + "/" + TH.mConfig.data.latest;
         TH.Network.get(url).then(function(responseStr) {
             TH.mData = TH.Parser.toJSON(responseStr);
-            TH.appData.data = TH.Parser.toJSON(responseStr).items;
+            TH.appData.data = TH.Parser.toJSON(responseStr).articles;
             TH.appData.total_page = Math.ceil(TH.appData.data.length / TH.mConfig.config.load_more);
             if (callback) {
                 callback(responseStr);
@@ -389,8 +392,8 @@ TH.Data = {
     },
     search: function(what) {
         TH.Data.clearList();
-        for (var i = 0; i < TH.mData.items.length; i++) {
-            var item = TH.mData.items[i];
+        for (var i = 0; i < TH.mData.articles.length; i++) {
+            var item = TH.mData.articles[i];
             what = what.toLowerCase();
             var name = item.name.toLowerCase();
             if (name.indexOf(what) != -1) {
