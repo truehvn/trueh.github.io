@@ -337,6 +337,8 @@ TH.UI = {
             if (dataContent.figure.src.indexOf("youtube.com") != -1) {
                 elemFigure.className = "video-container";
                 elemFigureChild = document.createElement("iframe");
+                elemFigureChild.setAttribute("frameborder", "0");
+                elemFigureChild.setAttribute("allowfullscreen", "");
             } else {
                 elemFigureChild = document.createElement("img");
             }
